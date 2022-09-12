@@ -1681,7 +1681,7 @@ inline bool operator>=(const dynamic_bitset<Block, Allocator>& a,
 template <typename Block, typename Allocator>
 inline std::size_t hash_value(const dynamic_bitset<Block, Allocator>& a)
 {
-    std::size_t res = hash_value(a.m_num_bits);
+    std::size_t res = boost::hash_value(a.m_num_bits);
     boost::hash_combine(res, a.m_bits);
     return res;
 }
